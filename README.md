@@ -98,7 +98,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# opinion-ate (Added)
+# opinion-ate (Added 1)
 
 An app for tracking reviews of dishes at different restaurants.
 Production: <https://your-netlify-domain.netlify.app>
