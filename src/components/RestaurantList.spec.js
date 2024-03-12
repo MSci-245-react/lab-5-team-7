@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import {RestaurantList} from './RestaurantList';
+import { RestaurantList } from './RestaurantList';
 
 describe('RestaurantList', () => {
   const restaurants = [
@@ -8,9 +8,11 @@ describe('RestaurantList', () => {
   ];
   let loadRestaurants;
 
-  function renderComponent() {
+  beforeEach(() => {
     loadRestaurants = jest.fn().mockName('loadRestaurants');
+  });
 
+  function renderComponent() {
     render(
       <RestaurantList
         loadRestaurants={loadRestaurants}
@@ -18,17 +20,15 @@ describe('RestaurantList', () => {
       />,
     );
   }
-  it('loads restaurants on first render', () => {
 
+  it('loads restaurants on first render', () => {
     renderComponent();
     expect(loadRestaurants).toHaveBeenCalled();
   });
 
   it('displays the restaurants', () => {
-
     renderComponent();
     expect(screen.getByText('Sushi Place')).toBeInTheDocument();
     expect(screen.getByText('Pizza Place')).toBeInTheDocument();
-
   });
 });
